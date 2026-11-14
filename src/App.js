@@ -1,10 +1,10 @@
 
 import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './Components/Navbar';
-import About from './Components/About';
+// import About from './Components/About';
 import Alert from './Components/Alert';
 import TextForm from './Components/TextForm';
 
@@ -43,11 +43,10 @@ function App() {
   };
 
   return (
-    <Router>
-
+    // <Router>
+<>
       <Navbar
         title="TextUtils"
-        aboutText="About"
         mode={mode}
         toggleMode={toggleMode}
       />
@@ -56,30 +55,31 @@ function App() {
 
       <div className="container my-3">
 
-        <Routes>
+        {/* <Routes>
 
           <Route
             path="/"
-            element={
+            element={ */}
               <TextForm
                 showAlert={showAlert}
                 heading="try - TextUtils, Counts Charecter, Remove Extra Space, Word Counter"
                 mode={mode}
               />
-            }
-          />
-
+            {/* }
+          /> */}
+{/* 
           <Route
             path="/about"
             element={<About mode={mode} />}
           />
 
-        </Routes>
+        </Routes> */}
 
       </div>
+      </>
 
-    </Router>
+    // {/* </Router> */}
   );
 }
 
-export default App;
+export default App ;
